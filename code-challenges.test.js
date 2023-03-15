@@ -68,6 +68,11 @@ const shuffleArray = (array) => {
 // --------------------2) Create a function that takes in an object that contains up votes and down votes and returns the end tally.
 
 // Psuedo code:
+// We will create a function that takes in an object containing upVotes and downVotes
+// Two variables are currently provided
+// we will test suite with expect statements for each of the variables
+// we would need to implament a function that calculates the end tally.
+// subtract the number of downVotes from the number of upVotes
 
 // a) Create a test with expect statements for each of the variables provided.
 
@@ -76,11 +81,13 @@ const votes1 = { upVotes: 13, downVotes: 2 };
 const votes2 = { upVotes: 2, downVotes: 33 };
 // Expected output: -31
 
-describe("takeVotesTally" = () => {
-  it("takes in an object that contains up votes and down votes and returns the end tally.", () => {});
-  expect(takeVoteTally(votes1)).toBe(11);
-  expect(takeVoteTally(votes2)).toBe(-31);
+describe("takeVotesTally", () => {
+  it("takes in an object that contains up votes and down votes and returns the end tally.", () => {
+    expect(takeVotesTally(votes1)).toEqual(11);
+    expect(takeVotesTally(votes2)).toEqual(-31);
+  });
 });
+//  ReferenceError: takeVotesTally is not defined
 
 // b) Create the function that makes the test pass.
 
@@ -92,20 +99,26 @@ const takeVotesTally = (votes) => {
 // --------------------3) Create a function that takes in two arrays as arguments and returns one array with no duplicate values. STRETCH: Use the spread operator to pass in a dynamic number of arguments.
 
 // Psuedo code:
+// We will create a function that takes in two arrays as arguments and returns one arrya with no dupliacte values
+// The two variables that are being used as expamples.
+//Implementating a funtion that would removes duplicates from the two arrays.
+// Now we will create a new set will all the different elements from both arrays, then convert the set into an array.
 
 // a) Create a test with an expect statement using the variables provided.
 
 const dataArray1 = ["array", "object", "number", "string", "Boolean"];
 const dataArray2 = ["string", "null", "Boolean", "string", "undefined"];
-// Expected output: ["array", "object", "number", "string", "Boolean", "null", "undefined"]
+// expected output: ["array", "object", "number", "string", "Boolean", "null", "undefined"]
 
 describe("joinedArray", () => {
   it("takes in two arrays as arguments and returns one array with no duplicate values.", () => {
     expect(joinedArrays(dataArray1, dataArray2)).toEqual([
+      "array",
+      "object",
+      "number",
       "string",
-      "null",
       "Boolean",
-      "string",
+      "null",
       "undefined",
     ]);
   });
@@ -113,6 +126,7 @@ describe("joinedArray", () => {
 
 // b) Create the function that makes the test pass.
 
-const joinedArrays = (...arrays) => {
-  return [...new Set([].concat(...arrays))];
+const joinedArrays = (array1, array2) => {
+  return [...new Set([...array1, ...array2])];
 };
+// console.log(joinedArrays(dataArray1, dataArray2));

@@ -10,7 +10,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 Your answer: objective - oriented programming is based on the concepts of objects, each with it's own properties or attributes. Functional programming mainly supports abstraction over data and abstraction over behavior. 
 
-Researched answer: n object-oriented programming data structures, or objects are defined, each with its own properties or attributes.Functional programming provides high performance in processing large data for applications. Object-oriented programming is not good for big data processing.
+Researched answer: object-oriented programming data structures, or objects are defined, each with its own properties or attributes.Functional programming provides high performance in processing large data for applications. Object-oriented programming is not good for big data processing.
 
 1. What is the difference between a Float and an Integer in Ruby?
 
